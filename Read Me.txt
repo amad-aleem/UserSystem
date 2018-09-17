@@ -1,0 +1,48 @@
+Prerequisites:
+	Node.js installed
+	Git bash
+	Node.js modules intellisense (npm) extention in your editor
+	Internet connection
+
+commands using npm(all below commands should be run in UserSystem directory):
+	1) go to UserSystem directory and open git bash in this directory
+	2) write " npm init ", and press enter for multiple times while it asks for many things like package name, version, description, etc but for entry point value, write server.js and press enter
+	3) after this process write " npm i express mongoose passport passport-jwt jsonwebtoken body-parser bcryptjs validator " and press enter
+	4) after above installation, write " npm i -D nodemon "
+	5) after above installation, open package.json file of UserSystem directory in any editor, and replace the whole scripts block with code below:
+"scripts": {
+                "start": "node server.js",
+	"server": "nodemon server.js"
+}
+
+	6) write " npm i gravatar ", and press enter
+	7) after above installation,  write " npm i -g create-react-app "
+	8) after above installation, write " create-react-app client "
+	9) now go to client direcatory that is created using above step, open package.json file in any editor, search for "scripts", and after the ending braces of this scripts, write after }, "proxy": "http://localhost:5000" save the file and close it.
+	10) go back to UserSystem directory using, git bash write " npm i concurrently "
+	11) after above installation, open package.json file of UserSystem directory in any editor, and replace the whole scripts block with code below:
+"scripts": {
+                "client-install": "npm install --prefix client",
+                "start": "node server.js",
+                "server": "nodemon server.js",
+                "client": "npm start --prefix client",
+                "US": "concurrently \"npm run server\" \"npm run client\""
+        }
+	
+
+Note: From now on all the commands should be run in client directory
+	12) now do to client directory in git bash using " cd client ", then write " npm i jwt-decode "
+	13) after above installation, write " npm i react-router-dom "
+	14) after above installation, write " npm i axios "
+	15) after above installation, write " npm i classnames "
+	16) after above installation, write " npm i redux react-redux redux-thunk "
+	17) after above installation, write " npm i jwt-decode "
+
+Replace all the contents of client folder with my uploaded client folder's contents. And to run this application go to UserSystem folder and open git bash here and write " npm run US "
+
+Happy coding...
+Regards,
+Muhammad Amad
+
+
+
