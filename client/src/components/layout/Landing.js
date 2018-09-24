@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 
 class Landing extends Component {
@@ -9,6 +9,7 @@ class Landing extends Component {
             this.props.history.push('/dashboard');
         }
     }
+
     render() {
         return (
             <div className="landing">
@@ -17,23 +18,32 @@ class Landing extends Component {
                         <div className="row">
                             <div className="col-md-12 text-center">
                                 <h1 className="display-3 mb-4">User System</h1>
-                                <p className="lead"> Simple User Login/Register System</p>
+                                <p className="lead">
+                                    {' '}
+                                    A simple user login/signup system using MERN Stack...
+                </p>
                                 <hr />
-                                <Link to="/register" className="btn btn-lg btn-info mr-2">Register</Link>
-                                <Link to="/login" className="btn btn-lg btn-light">Login</Link>
+                                <Link to="/register" className="btn btn-lg btn-info mr-2">
+                                    Sign Up
+                </Link>
+                                <Link to="/login" className="btn btn-lg btn-light">
+                                    Login
+                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
 Landing.propTypes = {
     auth: PropTypes.object.isRequired
 };
-const mapStateToProps = (state) => ({
+
+const mapStateToProps = state => ({
     auth: state.auth
 });
+
 export default connect(mapStateToProps)(Landing);

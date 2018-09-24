@@ -37,7 +37,9 @@ Note: From now on all the commands should be run in client directory
 	15) after above installation, write " npm i classnames "
 	16) after above installation, write " npm i redux react-redux redux-thunk "
 	17) after above installation, write " npm i jwt-decode "
-
+	18) after above installation, write " npm i react-moment "
+	19) after above installation, write " npm i moment "
+	
 Replace all the contents of client folder with my uploaded client folder's contents. And to run this application go to UserSystem folder and open git bash here and write " npm run US "
 
 Happy coding...
